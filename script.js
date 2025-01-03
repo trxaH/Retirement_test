@@ -91,19 +91,17 @@ class Quiz {
           Wealth: `Take their luggage for them`,
         },
       },
-      // { //only show when got tie-breaker
-      //   image: `quiz-Q9.png`,
-      //   transition: ``,
-      //   question: `When you are at the Northern Lights, for your first picture, do you: `,
-      //   answers: {
-      //     // Sensing: `Get drawn to the sights, sounds and smells`,
-      //     // Intuition: `Wonder if night markets will always exist and what they represent`,
-      //     Capital: `Take a selfie`,
-      //     Wealth: `Ask someone to take pictures of you`,
-      //     Income: `Take pictures of the scenery`,
-      //     Legacy: `Live in the moment and enjoy it without taking pictures`,
-      //   },
-      // },
+      { //only show when got tie-breaker
+        image: `quiz-Q1.png`,
+        transition: ``,
+        question: `When you are at the Northern Lights, for your first picture, do you: `,
+        answers: {
+          Capital: `Take a selfie`,
+          Wealth: `Ask someone to take pictures of you`,
+          Income: `Take pictures of the scenery`,
+          Legacy: `Live in the moment and enjoy it without taking pictures`,
+        },
+      },
     ].map((v, i) => ({ ...v, id: i + 1 }));
 
     this.RESULT = [
@@ -206,34 +204,37 @@ class Quiz {
 
   showResult() {
     console.log("showResult => userAnswers -", this.userAnswers);
-
+  
     if (this.userAnswers && this.userAnswers.length) {
       // Count category occurrences
       const counts = this.userAnswers.reduce((acc, { answer }) => {
         acc[answer] = (acc[answer] || 0) + 1;
         return acc;
       }, {});
-
+  
       // Find categories with the highest count
       const maxCount = Math.max(...Object.values(counts));
       const dominantCategories = Object.keys(counts).filter(
         (key) => counts[key] === maxCount
       );
-
+  
       console.log("Dominant Categories:", dominantCategories);
-
+  
       let dominantCategory;
-
+  
       // If there's a tie, show the tiebreaker question
       if (dominantCategories.length > 1) {
         console.log("Tie detected, initiating tiebreaker...");
-
-        // Render the tiebreaker question
+  
+        // Render the tiebreaker question using quiz-Q9.png
         const quizRender = document.getElementById("quiz-render");
-
+  
         if (quizRender) {
           quizRender.innerHTML = `
             <div class="uk-card quiz-card">
+              <div class="ans-banner-container">
+                <img class="quiz-cover-image" src="pic/quiz-Q9.png" alt="Tiebreaker Question">
+              </div>
               <div class="quiz-info">
                 <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">
                   It's a tie! To determine your result, please answer this tiebreaker question:
@@ -253,20 +254,20 @@ class Quiz {
                 </div>
               </div>
             </div>`;
-
+  
           const tiebreakerOptions = document.querySelectorAll(".quiz-option input");
-
+  
           if (tiebreakerOptions.length > 0) {
             tiebreakerOptions.forEach((option) => {
               option.addEventListener("change", () => {
                 tiebreakerOptions.forEach((el) => el.setAttribute("disabled", true));
-
+  
                 const selectedInput = document.querySelector(".quiz-option input:checked");
-
+  
                 if (selectedInput) {
                   dominantCategory = selectedInput.value;
                   console.log("Tiebreaker Winner:", dominantCategory);
-
+  
                   // Proceed to display the result
                   this.processResult(dominantCategory);
                 }
@@ -275,16 +276,15 @@ class Quiz {
           }
         }
       } else {
-        // No tie, directly proceed
         dominantCategory = dominantCategories[0];
         console.log("Dominant Category:", dominantCategory);
-        
+
         const resultData = this.RESULT.find(
-          (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
+          (r) => r.format.toLowerCase().includes(category.toLowerCase())
         );
-    
+      
         console.log("Result Data:", resultData);
-    
+      
         if (resultData) {
           location.href = resultData.url;
         } else {
