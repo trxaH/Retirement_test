@@ -2,7 +2,7 @@
     max-width: 650px;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'OpenSans-Bold';
     src: url("public/fonts/OpenSans-Bold.ttf") format("ttf"), url("public/fonts/OpenSans-Bold.otf") format("otf"), url("public/fonts/OpenSans-Bold.eot") format("eot"), url("public/fonts/OpenSans-Bold.svg") format("svg"), url("public/fonts/OpenSans-Bold.woff") format("woff"), url("public/fonts/OpenSans-Bold.woff2") format("woff2");
 }
@@ -20,7 +20,7 @@
 @font-face {
     font-family: 'OpenSans-Regular';
     src: url("public/fonts/OpenSans-Regular.ttf") format("ttf"), url("public/fonts/OpenSans-Regular.otf") format("otf"), url("public/fonts/OpenSans-Regular.eot") format("eot"), url("public/fonts/OpenSans-Regular.svg") format("svg"), url("public/fonts/OpenSans-Regular.woff") format("woff"), url("public/fonts/OpenSans-Regular.woff2") format("woff2");
-}
+} */
 
 /*********************/
 /** Index Page CSS **/
@@ -33,6 +33,7 @@
     margin-bottom: 30px;
 }
 
+/* hold image and text */
 .uk-card {
     border: 1px solid #47464742;
     display: inline-block;
@@ -42,7 +43,7 @@
 
 .cover-img {
     width: 100%;
-    aspect-ratio: 65/45;
+    /* aspect-ratio: 65/45; */
     object-fit: cover;
     object-position: center center;
 }
@@ -50,6 +51,8 @@
 .lets-begin-info {
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 100px;
+    z-index: 1;
 }
 
 .lets-begin-desc {
@@ -62,6 +65,7 @@
     margin: 0 auto;
     display: block;
     padding: 35px 0px;
+    /* position: absolute; */
 }
 
 @media (max-width: 595px) {
@@ -150,15 +154,15 @@
     /* background-size: cover;
     background-position: top; */
     width: 100%;
-    aspect-ratio: 65/45;
+    /* aspect-ratio: 65/45; */
     object-fit: cover;
     object-position: center center;
 }
 
-.quiz-info {
+/* .quiz-info {
     padding-left: 15px;
     padding-right: 15px;
-}
+} */
 
 .quiz-transition {
     font-family: 'OpenSans-Regular', sans-serif;
@@ -278,68 +282,20 @@
     height: 450px;
 }
 
-.action-hero-img {
-    background-image: url('public/images/quiz/cover-The-Action-Hero.png');
+.capital-img {
+    background-image: url('pic/capital.png');
 }
 
-.adventurer-img {
-    background-image: url('public/images/quiz/cover-The-Adventurer.png');
+.wealth-img {
+    background-image: url('pic/wealth.png');
 }
 
-.architect-img {
-    background-image: url('public/images/quiz/cover-The-Architect.png');
+.income-img {
+    background-image: url('pic/income.png');
 }
 
-.captain-img {
-    background-image: url('public/images/quiz/cover-The-Captain.png');
-}
-
-.cheerleader-img {
-    background-image: url('public/images/quiz/cover-The-Cheerleader.png');
-}
-
-.dreamer-img {
-    background-image: url('public/images/quiz/cover-The-Dreamer.png');
-}
-
-.drill-sergeant-img {
-    background-image: url('public/images/quiz/cover-The-Drill-Sergeant.png');
-}
-
-.engineer-img {
-    background-image: url('public/images/quiz/cover-The-Engineer.png');
-}
-
-.entertainer-img {
-    background-image: url('public/images/quiz/cover-The-Entertainer.png');
-}
-
-.firecracker-img {
-    background-image: url('public/images/quiz/cover-The-Firecracker.png');
-}
-
-.social-guru-img {
-    background-image: url('public/images/quiz/cover-The-Social-Guru.png');
-}
-
-.guardian-img {
-    background-image: url('public/images/quiz/cover-The-Guardian.png');
-}
-
-.maverick-img {
-    background-image: url('public/images/quiz/cover-The-Maverick.png');
-}
-
-.prodigy-img {
-    background-image: url('public/images/quiz/cover-The-Prodigy.png');
-}
-
-.sage-img {
-    background-image: url('public/images/quiz/cover-The-Sage.png');
-}
-
-.timekeeper-img {
-    background-image: url('public/images/quiz/cover-The-Timekeeper.png');
+.legacy-img {
+    background-image: url('pic/legacy.png');
 }
 
 .quiz-ans-content {
@@ -367,7 +323,7 @@
     color: #FFFFFF;
 }
 
-.spark-img-center-wrapper {
+/* .spark-img-center-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -379,14 +335,14 @@
     gap: 0px;
     opacity: 0px;
     padding-bottom: 30px;
-}
+} */
 
 .uk-container-full-width {
     width: 100%;
     padding: 0;
 }
 
-.quiz-stats-card {
+/* .quiz-stats-card {
     background-color: #DBE2E7;
     color: #DE0000;
     text-align: center;
@@ -427,13 +383,13 @@
     padding: 29px 20px 29px 20px;
     gap: 10px;
     opacity: 0px;
-}
+} */
 
 
 
 
 /* Base styles for two-column layout */
-.compatible-container {
+/* .compatible-container {
     display: flex;
     align-items: stretch;
     border-bottom: 1px solid #000000;
@@ -447,10 +403,10 @@
 .compatible-divider {
     width: 1px;
     background-color: #000000;
-}
+} */
 
 /* Styles for the title and box elements */
-.compatible-title-left,
+/* .compatible-title-left,
 .compatible-title-right {
     font-family: 'OpenSans-Regular', sans-serif;
     font-size: 21px;
@@ -518,7 +474,7 @@
     line-height: 24px;
     text-align: left;
     color: #67737C;
-}
+} */
 
 /* Media query for single-column layout */
 @media (max-width: 595px) {
@@ -617,14 +573,14 @@
     z-index: -1;
 } */
 
-.spark-bg-overlay {
+/* .spark-bg-overlay {
     position: absolute;
     top: 23%;
     right: 0;
     width: 11.5%;
     opacity: 0.4;
     z-index: -1;
-}
+} */
 
 .red-box-title {
     color: #000000;
@@ -913,7 +869,7 @@
 
     .cover-img {
         width: 100%;
-        aspect-ratio: 65/45;
+        /* aspect-ratio: 65/45; */
         object-fit: cover;
         object-position: center center;
     }
