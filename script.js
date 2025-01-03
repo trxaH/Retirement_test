@@ -206,36 +206,93 @@ class Quiz {
 
   showResult() {
     console.log("showResult => userAnswers -", this.userAnswers);
-  
+
     if (this.userAnswers && this.userAnswers.length) {
       // Count category occurrences
       const counts = this.userAnswers.reduce((acc, { answer }) => {
         acc[answer] = (acc[answer] || 0) + 1;
         return acc;
       }, {});
-  
-      // Find the highest count
-      const dominantCategory = Object.keys(counts).reduce((a, b) =>
-        counts[a] > counts[b] ? a : b
+
+      // Find categories with the highest count
+      const maxCount = Math.max(...Object.values(counts));
+      const dominantCategories = Object.keys(counts).filter(
+        (key) => counts[key] === maxCount
       );
-  
-      console.log("Dominant Category:", dominantCategory);
-  
-      // Match result
-      const resultData = this.RESULT.find(
-        (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
-      );
-  
-      console.log("Result Data:", resultData);
-  
-      if (resultData) {
-        location.href = resultData.url;
+
+      console.log("Dominant Categories:", dominantCategories);
+
+      let dominantCategory;
+
+      // If there's a tie, show the tiebreaker question
+      if (dominantCategories.length > 1) {
+        console.log("Tie detected, initiating tiebreaker...");
+
+        // Render the tiebreaker question
+        const quizRender = document.getElementById("quiz-render");
+
+        if (quizRender) {
+          quizRender.innerHTML = `
+            <div class="uk-card quiz-card">
+              <div class="quiz-info">
+                <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">
+                  It's a tie! To determine your result, please answer this tiebreaker question:
+                </p>
+                <div class="quiz-options">
+                  ${dominantCategories
+                    .map(
+                      (category) => `
+                      <div class="quiz-option" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 600">
+                        <input id="tiebreaker-${category}" type="radio" name="tiebreaker" value="${category}">
+                        <label for="tiebreaker-${category}">
+                          ${category}
+                        </label>
+                      </div>`
+                    )
+                    .join("")}
+                </div>
+              </div>
+            </div>`;
+
+          const tiebreakerOptions = document.querySelectorAll(".quiz-option input");
+
+          if (tiebreakerOptions.length > 0) {
+            tiebreakerOptions.forEach((option) => {
+              option.addEventListener("change", () => {
+                tiebreakerOptions.forEach((el) => el.setAttribute("disabled", true));
+
+                const selectedInput = document.querySelector(".quiz-option input:checked");
+
+                if (selectedInput) {
+                  dominantCategory = selectedInput.value;
+                  console.log("Tiebreaker Winner:", dominantCategory);
+
+                  // Proceed to display the result
+                  this.processResult(dominantCategory);
+                }
+              });
+            });
+          }
+        }
       } else {
-        console.error("No matching result found.");
+        // No tie, directly proceed
+        dominantCategory = dominantCategories[0];
+        console.log("Dominant Category:", dominantCategory);
+        
+        const resultData = this.RESULT.find(
+          (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
+        );
+    
+        console.log("Result Data:", resultData);
+    
+        if (resultData) {
+          location.href = resultData.url;
+        } else {
+          console.error("No matching result found.");
+        }
       }
     }
-  }
-  
+  }  
 }
 
 document.addEventListener("DOMContentLoaded", function () {
