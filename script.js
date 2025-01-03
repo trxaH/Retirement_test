@@ -237,7 +237,7 @@ class Quiz {
               </div>
               <div class="quiz-info">
                 <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">
-                  It's a tie! To determine your result, please answer this tiebreaker question:
+                  
                 </p>
                 <div class="quiz-options">
                   ${dominantCategories
