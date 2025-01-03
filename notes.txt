@@ -1,56 +1,7 @@
-traits:
-Security (S): Preference for stability and preservation of capital.
-Growth (G): Focus on wealth accumulation and growth.
-Income (I): Need for regular income and dividends.
-Legacy (L): Focus on creating long-term wealth and leaving a financial legacy.
-Aggressive Growth (AG): High risk tolerance for significant growth.
-Moderate Growth (MG): Balanced approach with moderate risk and growth.
-High Income (HI): Emphasis on high regular income.
-Low Risk (LR): Preference for investments with minimal risk.
+js line 174 = <img class="quiz-cover-image" src="${this.imagePatch}${quizData.image}" alt="Quiz Cover Image">
 
-mapping funds to traits:
-Security (S)
+<img src="pic/logo.png" class="ans-overlay" alt="LGI Overlay Logo">
 
-SGD MMF
-SGD ELF
-SDBF
-Growth (G)
+text over image
 
-ASF Growth ACC
-Infinity Global
-Asia Pac
-Income (I)
-
-ASF Growth Dist
-ASF Standard Dist
-Asia Financials ETF
-SREITs ETF
-Legacy (L)
-
-ASF Standard
-Decu
-ASF Growth Decu
-Aggressive Growth (AG)
-
-Infinity Global
-ASF Growth ACC
-Moderate Growth (MG)
-
-Asia Pac
-ASF Standard
-High Income (HI)
-
-Asia Financials ETF
-SREITs ETF
-Low Risk (LR)
-
-SGD MMF
-SGD ELF
-SDBF
-
-either 2 or 4 options per question/scenario
-If you have a broad audience and want to keep things simple, 2 options per question might be best. 
-This could be useful if your quiz is just a preliminary filter and you're planning to offer more personalized advice later.
-
-If you want to provide more tailored recommendations and have a wide range of funds, 4 options might be better. 
-This approach allows you to distinguish between different risk tolerances, investment goals, and other preferences.
+endings not working

@@ -1,127 +1,109 @@
 class Quiz {
   constructor() {
     this.imagePatch = `pics`;
-    // this.imagePatch = `public/images/quiz/`;
-    // this.imagePatch = `public/images/`;
 
     this.QUIZ = [
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `You begin your adventure at the Singapore Flyer, where you are greeted by the shimmering waters and city skyline. As you take in the sights from the top of the flyer, you see a single orchid in front of you.<br><br> Do you ...`,
+        question: `As you prepare to embark on a long journey, you pack your bag. <br> How do you pack?`,
         answers: {
-          // Sensing: `Admire the orchid’s details and colours`,
-          // Intuition: `Think about what the orchid symbolises`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Wealth: `Bring the bare minimum`,
+          Capital: `Pack everything you might need`,
+          Legacy: `Pack half and wash there`,
+          Income: `Pack half and buy the rest there`,
         },
       },
       {
-        image: `quiz-Q2.png`,
-        transition: `Your choice illuminates a pathway of flowers that leads you to the Shilin Night Market in Taipei.`,
-        question: `The scent of street food fills the air, blending with the lively buzz of vendors. <br><br> Do you ... `,
+        image: `quiz-Q1.png`,
+        transition: ``,
+        question: `Who is accompanying you to see the Northern Lights?`,
         answers: {
-          // Introversion: `Prefer to explore the market quietly, soaking in the sights and sounds`,
-          // Extroversion: `Engage with the vendors and make every interaction a part of the experience`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Capital: `2 - 3 friends to split cost`,
+          Legacy: `Bring the whole kampong`,
+          Wealth: `Traveling solo for adventure`,
+          Income: `Join a tour group for convenience`,
         },
       },
       {
-        image: `quiz-Q3.png`,
-        transition: `A lantern vendor hands you a magical lantern that lifts you into the sky, carrying you into the clouds.`,
-        question: `Upon landing, you find yourself standing atop Victoria Peak in Hong Kong. The city lights sparkle like stars below you.<br><br> Do you ... `,
+        image: `quiz-Q1.png`,
+        transition: ``,
+        question: `It's time to head to the airport. <br> How early do you leave?`,
         answers: {
-          // Thinking: `Examine the lantern and wonder how it works`,
-          // Feeling: `Focus on the magical and emotional experience`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Legacy: `Leave 3 hours early to go shopping/eating`,
+          Capital: `Leave 3 hours early because kiasu`,
+          Income: `Leave 2 hours before to be just right on time`,
+          Wealth: `Leave 1 hour before your flight`,
         },
       },
       {
-        image: `quiz-Q4.png`,
-        transition: `A mystical fog envelops you, and as it clears, you find yourself at the Amber Fort in Jaipur, a majestic fortress perched on a hilltop.`,
-        question: `A peacock gracefully approaches, its vibrant feathers fanned out in a dazzling display. <br><br> Do you ... `,
+        image: `quiz-Q1.png`,
+        transition: ``,
+        question: `While queuing to check in your luggage, someone tries to cut in front of you. <br> Do you:`,
         answers: {
-          // Judging: `Avoid the peacock and stay cautious of your surroundings `,
-          // Perceiving: `Observe the peacock’s behaviour and adapt to the unfolding situation`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Capital: `Let them cut in front of you hoping that someone else will speak up`,
+          Legacy: `Ask them nicely to join the queue behind you`,
+          Wealth: `Speak loudly to get them to join the queue`,
+          Income: `Let them cut in front of you to avoid creating a scene`,
         },
       },
       {
-        image: `quiz-Q5.png`,
-        transition: `A shimmering peacock feather floats into your hand. The moment you touch it, you’re whisked away to the Great Wall of China.`,
-        question: `Suddenly, a tiny dragon appears before your eyes!<br><br> Do you ... `,
+        image: `quiz-Q1.png`,
+        transition: ``,
+        question: `At the check in counter, you're told that your flight is delayed. What do you do first?`,
         answers: {
-          // Sensing: `Find the size of the dragon amusing`,
-          // Intuition: `Think about the significance of the dragon appearing now`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Income: `Pay extra to get onto the next available flight`,
+          Wealth: `Create a ruckus`,
+          Capital: `Wait for the delayed flight`,
+          Legacy: `Claim full compensation from insurance happily`,
         },
       },
       {
-        image: `quiz-Q6.png`,
-        transition: `You stumble into a glowing portal and emerge at the Borobudur Temple in Indonesia.`,
-        question: `The early morning mist swirls around the ancient Buddhist monument, creating a mystical atmosphere. <br><br> Do you ... `,
+        image: `quiz-Q1.png`,
+        transition: ``,
+        question: `You still have 30 minutes before your flight and you're feeling hungry. What do you do?`,
         answers: {
-          // Introversion: `Find a quiet spot to relax and catch your breath`,
-          // Extroversion: `Seek out other visitors in the area to learn more about the temple`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Wealth: `Eat at a restaurant at the transit area`,
+          Capital: `Wait for the in-flight meal`,
+          Legacy: `Get a snack at the convenience store`,
+          Income: `Buy a takeaway at transit area and eat on the aircraft`,
         },
       },
       {
-        image: `quiz-Q7.png`,
-        transition: `A gentle breeze carries the scent of incense. As you take a deep breath and close your eyes, a wave of calm washes over you. `,
-        question: `When you open your eyes, you find yourself at the top Marina Bay Sands, by the infinity pool.<br><br> Do you ... `,
+        image: `quiz-Q1.png`,
+        transition: ``,
+        question: `Seated at the window seat, you're enjoying the view when you notice the person next to you is sleeping. What do you do?`,
         answers: {
-          // Thinking: `Assess your surroundings and wonder where everyone is`,
-          // Feeling: `Relish the moment and enjoy the serene setting by the pool`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Wealth: `Continue enjoying the view with the shade up`,
+          Legacy: `Pull down the window shade fully`,
+          Capital: `Lower the shade halfway so you can still enjoy the view`,
+          Income: `Leave the shade up until they ask you to close it`,
         },
       },
       {
-        image: `quiz-Q8.png`,
-        transition: `Water droplets start forming all around. `,
-        question: `All at once, they splash to the ground and you find yourself at the Taroko Gorge in Taiwan, surrounded by marble cliffs and turquoise rivers. You also notice several groups of people around. <br><br> Do you ... `,
+        image: `quiz-Q1.png`,
+        transition: ` `,
+        question: `At the baggage claim, you notice someone struggling to lift their luggage. Do you:`,
         answers: {
-          // Judging: `Follow a planned route to visit the main attractions`,
-          // Perceiving: `Wander the gorge freely, enjoying unexpected discoveries`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
+          Legacy: `Offer to help them`,
+          Income: `Take your luggage and walk away`,
+          Capital: `Look around to see if anyone else is offering help`,
+          Wealth: `Take their luggage for them`,
         },
       },
-      {
-        image: `quiz-Q9.png`,
-        transition: `You take two steps forward, and suddenly, the sky darkens.`,
-        question: `You find yourself at the vibrant Temple Street Night Market in Hong Kong, surrounded by stalls brimming with trinkets, clothes and food.<br><br> Do you ... `,
-        answers: {
-          // Sensing: `Get drawn to the sights, sounds and smells`,
-          // Intuition: `Wonder if night markets will always exist and what they represent`,
-          Capital: `AAAAAAAAAAAA`,
-          Wealth: `BBBBBBBBBBBB`,
-          Income: `CCCCCCCC`,
-          Legacy: `DDDDDDDDDD`,
-        },
-      },
+      // { //only show when got tie-breaker
+      //   image: `quiz-Q9.png`,
+      //   transition: ``,
+      //   question: `When you are at the Northern Lights, for your first picture, do you: `,
+      //   answers: {
+      //     // Sensing: `Get drawn to the sights, sounds and smells`,
+      //     // Intuition: `Wonder if night markets will always exist and what they represent`,
+      //     Capital: `Take a selfie`,
+      //     Wealth: `Ask someone to take pictures of you`,
+      //     Income: `Take pictures of the scenery`,
+      //     Legacy: `Live in the moment and enjoy it without taking pictures`,
+      //   },
+      // },
     ].map((v, i) => ({ ...v, id: i + 1 }));
 
     this.RESULT = [
@@ -163,7 +145,7 @@ class Quiz {
       const isLastQuiz = quizID >= this.QUIZ.length;
 
       if (quizData) {
-        document.title = `Retirement Quiz ${quizID} | LGI`;
+        document.title = `Retirement Quiz | Lion Global Investors`;
 
         const quizRender = document.getElementById("quiz-render");
 
@@ -171,13 +153,8 @@ class Quiz {
           quizRender.innerHTML = `
                     <div class="uk-card quiz-card" data-id="${quizData.id}">
                         <div class="ans-banner-container">
-                            <img class="quiz-cover-image" src="${this.imagePatch}${quizData.image}" alt="Quiz Cover Image">
-                            <img src="pics/logo.png" class="ans-overlay" alt="LGI Overlay Logo">
+                            <img class="quiz-cover-image" src="pic/${quizData.image}" alt="Quiz Cover Image">
                         </div>
-                        ${quizData.transition ? `
-                        <div class="quiz-info">
-                            <p class="quiz-transition" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false">${quizData.transition}</p>
-                        </div>` : ""}
                         <div class="quiz-info">
                             <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">${quizData.question}</p>
                             <div class="quiz-options">
@@ -243,35 +220,46 @@ class Quiz {
       //   location.href = resultData.url;
       // }
 
-      // e	n	t	p
-      // i	s	f	j
       let answerArray = this.userAnswers.map((item) => item.answer.charAt(0));
       function countElements(value) {
         return answerArray.filter((x) => x === value).length;
       }
-      console.log("A", countElements("A"));
-      console.log("----------------");
-      console.log("B", countElements("B"));
-      console.log("----------------");
-      console.log("C", countElements("C"));
-      console.log("----------------");
-      console.log("D", countElements("D"));
-      console.log("----------------");
-      // console.log("T", countElements("T"));
-      // console.log("F", countElements("F"));
+      // console.log("Capital", countElements("Capital"));
       // console.log("----------------");
-      // console.log("P", countElements("P"));
-      // console.log("j", countElements("j"));
-      console.log("----------------");
+      // console.log("Wealth", countElements("Wealth"));
+      // console.log("----------------");
+      // console.log("Income", countElements("Income"));
+      // console.log("----------------");
+      // console.log("Legacy", countElements("Legacy"));
+      // console.log("----------------");
 
       // ALLOCATING TO EACH QUESTIONS' ANSWER TO RETIREMENT GOAL (PUT ALL HERE) !!CHECK
-      let fistAnswerKey =
-        countElements("E") > countElements("I")
-          ? "E"
-          : countElements("I") > countElements("E")
-            ? "I"
-            : "E";
-      console.log({ fistAnswerKey });
+      if (countElements("Capital") > countElements("Wealth") && countElements("Capital") > countElements("Income") && countElements("Capital") > countElements("Legacy")){
+          // let fistAnswerKey = "Capital";
+          // console.log({ fistAnswerKey });
+        // document.location.href = "result-capital-preservation.html";
+        location.href = resultData.url;
+      }  
+      else if (countElements("Wealth") > countElements("Capital") && countElements("Wealth") > countElements("Income") && countElements("Wealth") > countElements("Legacy")){
+        let secondAnswerKey = "Wealth";
+        console.log({ secondAnswerKey });
+      }
+      else if (countElements("Income") > countElements("Capital") && countElements("Income") > countElements("Wealth") && countElements("Income") > countElements("Legacy")){
+        let thridAnswerKey = "Income";
+        console.log({ thridAnswerKey });
+      }
+      else if (countElements("Legacy") > countElements("Capital") && countElements("Legacy") > countElements("Wealth") && countElements("Legacy") > countElements("Income")){
+        let fourthAnswerKey = "Legacy";
+        console.log({ fourthAnswerKey });
+      }
+      
+      // let fistAnswerKey =
+      //   countElements("Capital") > countElements("Wealth")
+      //     ? "Capital"
+      //     : countElements("I") > countElements("E")
+      //       ? "I"
+      //       : "E";
+
       // let secondAnswerKey =
       //   countElements("N") > countElements("S")
       //     ? "N"
@@ -294,20 +282,21 @@ class Quiz {
       //       : "P";
       // console.log({ fourthAnswerKey });
 
-      let answerString = [
-        fistAnswerKey,
-        // secondAnswerKey,
-        // thridAnswerKey,
-        // fourthAnswerKey,
-      ].join("");
-      console.log({ answerString });
-      const resultData = this.RESULT.find(
-        (r) => r.formatCheck === answerString
-      );
-      console.log({ resultData });
-      if (resultData) {
-        location.href = resultData.url;
-      }
+      // let answerString = [
+      //   fistAnswerKey,
+      //   secondAnswerKey,
+      //   thridAnswerKey,
+      //   fourthAnswerKey,
+      // ]
+      // // ].join("");
+      // // console.log({ answerString });
+      // const resultData = this.RESULT.find(
+      //   (r) => r.formatCheck === answerString
+      // );
+      // console.log({ resultData });
+      // if (resultData) {
+      //   location.href = resultData.url;
+      // }
     }
   }
 }
