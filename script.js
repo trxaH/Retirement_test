@@ -206,13 +206,11 @@ class Quiz {
     console.log("showResult => userAnswers -", this.userAnswers);
   
     if (this.userAnswers && this.userAnswers.length) {
-      // Count category occurrences
       const counts = this.userAnswers.reduce((acc, { answer }) => {
         acc[answer] = (acc[answer] || 0) + 1;
         return acc;
       }, {});
   
-      // Find categories with the highest count
       const maxCount = Math.max(...Object.values(counts));
       const dominantCategories = Object.keys(counts).filter(
         (key) => counts[key] === maxCount
@@ -222,11 +220,9 @@ class Quiz {
   
       let dominantCategory;
   
-      // If there's a tie, show the tiebreaker question
       if (dominantCategories.length > 1) {
         console.log("Tie detected, initiating tiebreaker...");
   
-        // Render the tiebreaker question using quiz-Q9.png
         const quizRender = document.getElementById("quiz-render");
   
         if (quizRender) {
@@ -237,7 +233,7 @@ class Quiz {
               </div>
               <div class="quiz-info">
                 <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">
-                  
+                  Choose your preference to break the tie:
                 </p>
                 <div class="quiz-options">
                   ${dominantCategories
@@ -268,7 +264,6 @@ class Quiz {
                   dominantCategory = selectedInput.value;
                   console.log("Tiebreaker Winner:", dominantCategory);
   
-                  // Proceed to display the result
                   this.processResult(dominantCategory);
                 }
               });
@@ -278,13 +273,13 @@ class Quiz {
       } else {
         dominantCategory = dominantCategories[0];
         console.log("Dominant Category:", dominantCategory);
-
+  
         const resultData = this.RESULT.find(
-          (r) => r.format.toLowerCase().includes(category.toLowerCase())
+          (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
         );
-      
+  
         console.log("Result Data:", resultData);
-      
+  
         if (resultData) {
           location.href = resultData.url;
         } else {
@@ -292,7 +287,8 @@ class Quiz {
         }
       }
     }
-  }  
+  }
+  
 }
 
 document.addEventListener("DOMContentLoaded", function () {
