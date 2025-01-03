@@ -206,99 +206,36 @@ class Quiz {
 
   showResult() {
     console.log("showResult => userAnswers -", this.userAnswers);
+  
     if (this.userAnswers && this.userAnswers.length) {
-      // const answerString = this.userAnswers
-      //   .map((a) => a.answer.toLowerCase())
-      //   .join(",");
-      // // console.log( 'showResult => answerString -', answerString );
-      // const resultData = this.RESULT.find(
-      //   (r) => r.formatCheck === answerString
-      // );
-      // console.log("showResult => resultData -", resultData);
-
-      // if (resultData) {
-      //   location.href = resultData.url;
-      // }
-
-      let answerArray = this.userAnswers.map((item) => item.answer.charAt(0));
-      function countElements(value) {
-        return answerArray.filter((x) => x === value).length;
-      }
-      // console.log("Capital", countElements("Capital"));
-      // console.log("----------------");
-      // console.log("Wealth", countElements("Wealth"));
-      // console.log("----------------");
-      // console.log("Income", countElements("Income"));
-      // console.log("----------------");
-      // console.log("Legacy", countElements("Legacy"));
-      // console.log("----------------");
-
-      // ALLOCATING TO EACH QUESTIONS' ANSWER TO RETIREMENT GOAL (PUT ALL HERE) !!CHECK
-      if (countElements("Capital") > countElements("Wealth") && countElements("Capital") > countElements("Income") && countElements("Capital") > countElements("Legacy")){
-          // let fistAnswerKey = "Capital";
-          // console.log({ fistAnswerKey });
-        // document.location.href = "result-capital-preservation.html";
+      // Count category occurrences
+      const counts = this.userAnswers.reduce((acc, { answer }) => {
+        acc[answer] = (acc[answer] || 0) + 1;
+        return acc;
+      }, {});
+  
+      // Find the highest count
+      const dominantCategory = Object.keys(counts).reduce((a, b) =>
+        counts[a] > counts[b] ? a : b
+      );
+  
+      console.log("Dominant Category:", dominantCategory);
+  
+      // Match result
+      const resultData = this.RESULT.find(
+        (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
+      );
+  
+      console.log("Result Data:", resultData);
+  
+      if (resultData) {
         location.href = resultData.url;
-      }  
-      else if (countElements("Wealth") > countElements("Capital") && countElements("Wealth") > countElements("Income") && countElements("Wealth") > countElements("Legacy")){
-        let secondAnswerKey = "Wealth";
-        console.log({ secondAnswerKey });
+      } else {
+        console.error("No matching result found.");
       }
-      else if (countElements("Income") > countElements("Capital") && countElements("Income") > countElements("Wealth") && countElements("Income") > countElements("Legacy")){
-        let thridAnswerKey = "Income";
-        console.log({ thridAnswerKey });
-      }
-      else if (countElements("Legacy") > countElements("Capital") && countElements("Legacy") > countElements("Wealth") && countElements("Legacy") > countElements("Income")){
-        let fourthAnswerKey = "Legacy";
-        console.log({ fourthAnswerKey });
-      }
-      
-      // let fistAnswerKey =
-      //   countElements("Capital") > countElements("Wealth")
-      //     ? "Capital"
-      //     : countElements("I") > countElements("E")
-      //       ? "I"
-      //       : "E";
-
-      // let secondAnswerKey =
-      //   countElements("N") > countElements("S")
-      //     ? "N"
-      //     : countElements("S") > countElements("N")
-      //       ? "S"
-      //       : "N";
-      // console.log({ secondAnswerKey });
-      // let thridAnswerKey =
-      //   countElements("T") > countElements("F")
-      //     ? "T"
-      //     : countElements("F") > countElements("T")
-      //       ? "F"
-      //       : "T";
-      // console.log({ thridAnswerKey });
-      // let fourthAnswerKey =
-      //   countElements("P") > countElements("J")
-      //     ? "P"
-      //     : countElements("J") > countElements("P")
-      //       ? "J"
-      //       : "P";
-      // console.log({ fourthAnswerKey });
-
-      // let answerString = [
-      //   fistAnswerKey,
-      //   secondAnswerKey,
-      //   thridAnswerKey,
-      //   fourthAnswerKey,
-      // ]
-      // // ].join("");
-      // // console.log({ answerString });
-      // const resultData = this.RESULT.find(
-      //   (r) => r.formatCheck === answerString
-      // );
-      // console.log({ resultData });
-      // if (resultData) {
-      //   location.href = resultData.url;
-      // }
     }
   }
+  
 }
 
 document.addEventListener("DOMContentLoaded", function () {
