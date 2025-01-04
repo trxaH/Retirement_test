@@ -31,6 +31,7 @@
     align-items: flex-start;
     margin-top: 30px;
     margin-bottom: 30px;
+    height: 1080px;
 }
 
 /* hold image and text */
@@ -55,8 +56,7 @@
 .lets-begin-info {
     padding-left: 15px;
     padding-right: 15px;
-    margin-bottom: 100px;
-    z-index: 1;
+    /* margin-bottom: 100px; */
 }
 
 .lets-begin-desc {
@@ -73,7 +73,7 @@
     transform: translate(-50%, -50%);
     z-index: 2; /* Ensure the div appears above the image */
     text-align: center;
-    width: 100%; /* Optional: adjust if you need to set a max width */
+    width: 70%; /* Optional: adjust if you need to set a max width */
 }
 
 @media (max-width: 595px) {
@@ -101,7 +101,7 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
     cursor: pointer;
     transition: all 0.3s ease;
 
@@ -113,6 +113,9 @@
     text-align: center;
     text-transform: none;
     padding: 20px;
+
+    z-index: 2;
+    position: relative;
 }
 
 .lets-begin-button:hover {
@@ -349,140 +352,6 @@
     width: 100%;
     padding: 0;
 }
-
-/* .quiz-stats-card {
-    background-color: #DBE2E7;
-    color: #DE0000;
-    text-align: center;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 29px 20px 29px 20px;
-    gap: 10px;
-    opacity: 0px;
-}
-
-.quiz-stats {
-    margin: 0;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-}
-
-.quiz-stats-percentage {
-    font-family: 'OpenSans-Bold', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-}
-
-.most-likely-txt {
-    background-color: #000000;
-    color: #FFFFFF;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 31.5px;
-    text-align: center;
-    padding: 29px 20px 29px 20px;
-    gap: 10px;
-    opacity: 0px;
-} */
-
-
-
-
-/* Base styles for two-column layout */
-/* .compatible-container {
-    display: flex;
-    align-items: stretch;
-    border-bottom: 1px solid #000000;
-}
-
-.compatible-column {
-    flex: 1;
-    padding: 20px;
-}
-
-.compatible-divider {
-    width: 1px;
-    background-color: #000000;
-} */
-
-/* Styles for the title and box elements */
-/* .compatible-title-left,
-.compatible-title-right {
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 31.5px;
-    text-align: left;
-    color: #000000;
-}
-
-.compatible-title-left span.compatible-red {
-    color: #DE0000;
-    font-family: 'OpenSans-Bold', sans-serif;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 31.5px;
-}
-
-.compatible-title-right span.compatible-grey {
-    color: #67737C;
-    font-family: 'OpenSans-Bold', sans-serif;
-    font-size: 21px;
-    font-weight: 700;
-    line-height: 31.5px;
-}
-
-.compatible-box {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    background-color: #FFFFFF;
-    width: 243px;
-    height: 70px;
-    gap: 0px;
-    border-radius: 50px;
-    opacity: 0px;
-}
-
-.compatible-box:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-.compatible-box img {
-    max-width: 60px;
-    margin-right: 20px;
-    border-radius: 67px;
-}
-
-.compatible-box p.left-txt {
-    margin: 0;
-    font-family: 'OpenSans-SemiBold', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
-    color: #DE0000;
-}
-
-.compatible-box p.right-txt {
-    margin: 0;
-    font-family: 'OpenSans-SemiBold', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
-    color: #67737C;
-} */
 
 /* Media query for single-column layout */
 @media (max-width: 595px) {
@@ -899,7 +768,7 @@
 @media screen and (max-width: 1080px) {
     .uk-container {
         width: 40%;
-        height: 20%;
+        height: 1920px;
     }
 
     .cover-img {
