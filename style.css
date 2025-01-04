@@ -271,8 +271,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .ans-banner-img {
@@ -365,9 +364,6 @@
     font-weight: 600;
     line-height: 24px;
     text-align: center;
-    margin-top: 40px;
-    margin-right: 40px;
-    margin-left: 40px;
     color: #000000;
 }
 
@@ -436,6 +432,10 @@
         width: 100%;
     }
 
+    .quiz-options {
+        padding-left: 580px;
+    }
+
     .brandbadge-content-img {
         width: 100%;
         padding: 20px 0;
@@ -461,9 +461,9 @@
     .quiz-radio-button {
         width: 100%;
     }
-    
+
     .quiz-options {
-        padding-left: 150px;
+        padding-left: 130px;
     }
 
     .brandbadge-content-img {
