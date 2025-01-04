@@ -59,7 +59,7 @@
     /* margin-bottom: 100px; */
 }
 
-.lets-begin-desc,.quiz-info {
+.lets-begin-desc {
     font-family: 'OpenSans-Regular', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -76,17 +76,16 @@
     width: 70%; /* Optional: adjust if you need to set a max width */
 }
 
-@media (max-width: 595px) {
+/* @media (max-width: 595px) {
     .lets-begin-desc {
         font-size: 16px;
         line-height: 24px;
         padding: 20px 0px;
     }
-}
+} */
 
 .lets-begin-button-link,
-.lets-begin-button-link:hover,
-.quiz-desc {
+.lets-begin-button-link:hover {
     text-decoration: none;
     font-family: 'OpenSans-Regular', sans-serif;
     font-size: 18px;
@@ -184,11 +183,6 @@
     object-position: center center;
 }
 
-/* .quiz-info {
-    padding-left: 15px;
-    padding-right: 15px;
-} */
-
 .quiz-transition {
     font-family: 'OpenSans-Regular', sans-serif;
     font-size: 16px;
@@ -201,20 +195,44 @@
     max-width: 610px;
 }
 
-/* .quiz-desc {
+.quiz-desc {
+    text-decoration: none;
     font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 24px;
-    text-align: center;
     color: #000000;
-} */
+    display: block;
+    position: absolute;
+    top: 24%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the div appears above the image */
+    text-align: center;
+    width: 400px; /* Optional: adjust if you need to set a max width */
+}
 
 .quiz-options {
+    position: absolute;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 280px;
+    padding-left: 600px;
+}
+
+.quiz-info {
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the div appears above the image */
+    text-align: center;
+    width: 70%; /* Optional: adjust if you need to set a max width */
 }
 
 .quiz-option {
@@ -756,33 +774,6 @@
 @media screen and (max-width: 959px) {
     .uk-container {
         width: 100%;
-    }
-
-    .cover-img {
-        width: 100%;
-        /* aspect-ratio: 65/45; */
-        object-fit: cover;
-        object-position: center center;
-    }
-
-    .lets-begin-button {
-        width: 100%;
-    }
-
-    .quiz-radio-button {
-        width: 100%;
-    }
-
-    .brandbadge-content-img {
-        width: 100%;
-        padding: 20px 0;
-    }
-}
-
-@media screen and (max-width: 1080px) {
-    .uk-container {
-        width: 40%;
-        height: 1920px;
     }
 
     .cover-img {
