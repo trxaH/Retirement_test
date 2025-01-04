@@ -29,17 +29,13 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 1080px;
+    margin-top: 20px;
 }
 
 /* hold image and text */
 .uk-card {
-    border: 1px solid #47464742;
     display: inline-block;
     max-width: 100%;
-    padding: 0px;
 }
 
 .uk-card-body {
@@ -68,7 +64,7 @@
     display: block;
     padding: 40px 0px 40px 0px;
     position: absolute;
-    top: 10%;
+    top: 11%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2; /* Ensure the div appears above the image */
@@ -99,19 +95,19 @@
     transform: translate(-50%, -50%);
     z-index: 2; /* Ensure the div appears above the image */
     text-align: center;
-    width: 400px; /* Optional: adjust if you need to set a max width */
+    width: 220px; /* Optional: adjust if you need to set a max width */
 }
 
 .lets-begin-button {
-    width: 92%;
+    /* width: 92%; */
 
-    border-radius: 20px;
+    border-radius: 12px;
     background-color: #CC0000;
     color: #FFFFFF;
     border: none;
 
     display: flex;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     justify-content: center;
     align-items: center;
     /* margin-bottom: 70px; */
@@ -125,7 +121,7 @@
     letter-spacing: 0.5px;
     text-align: center;
     text-transform: none;
-    padding: 20px;
+    padding: 12px;
 
     z-index: 2;
     position: relative;
@@ -145,10 +141,6 @@
 /** WYS Quiz QN Page CSS ***/
 /****************************/
 .quiz-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; */
 
     display: flex;
     justify-content: center;
@@ -163,17 +155,9 @@
     gap: 10px;
     margin-top: 0;
     align-items: center;
-    margin-bottom: 50px;
-    padding: 0 0 50px;
-
-    /* border: 1px solid #47464742;
-    display: inline-block;
-    max-width: 100%;
-    padding: 0px; */
 }
 
 .quiz-cover-image {
-    margin-bottom: 20px;
     opacity: 1;
     /* background-size: cover;
     background-position: top; */
@@ -208,7 +192,7 @@
     transform: translate(-50%, -50%);
     z-index: 2; /* Ensure the div appears above the image */
     text-align: center;
-    width: 400px; /* Optional: adjust if you need to set a max width */
+    width: 300px; /* Optional: adjust if you need to set a max width */
 }
 
 .quiz-options {
@@ -216,8 +200,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 280px;
-    padding-left: 600px;
+    margin-top: 150px;
+    padding-left: 580px;
+    width: 200px;
 }
 
 .quiz-info {
@@ -248,14 +233,14 @@
     display: block;
     width: 100%;
     font-family: 'OpenSans-SemiBold', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
-    line-height: 21.79px;
+    /* line-height: 21.79px; */
     letter-spacing: .5px;
     color: #FFFFFF;
     background: #000;
-    border-radius: 20px;
-    padding: 15px 20px;
+    border-radius: 10px;
+    padding: 10px;
     transition: all .3s ease;
     cursor: pointer;
     text-align: center;
@@ -366,345 +351,6 @@
     color: #FFFFFF;
 }
 
-/* .spark-img-center-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.spark-content-img {
-    width: 380px;
-    gap: 0px;
-    opacity: 0px;
-    padding-bottom: 30px;
-} */
-
-.uk-container-full-width {
-    width: 100%;
-    padding: 0;
-}
-
-/* Media query for single-column layout */
-@media (max-width: 595px) {
-    .compatible-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .compatible-divider {
-        display: none;
-    }
-
-    .compatible-title-left,
-    .compatible-title-right {
-        text-align: center;
-    }
-
-    .compatible-column {
-        width: 100%;
-        text-align: center;
-    }
-
-    .compatible-box {
-        margin: 0 auto;
-        width: 90%;
-        max-width: 400px;
-    }
-}
-
-.great-mind-container {
-    background-color: #DBE2E7;
-    color: #000000;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 31.5px;
-    text-align: center;
-}
-
-.great-mind-title {
-    color: #000000;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
-    text-align: center;
-    padding: 29px 20px 0px 20px;
-    gap: 10px;
-    opacity: 0px;
-}
-
-.great-mind-txt-container {
-    padding: 20px 120px 40px 120px;
-}
-
-.great-mind-card-txt {
-    width: 215px;
-    height: 67px;
-    border-radius: 20px;
-    opacity: 0px;
-    background-color: #C4CED5;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22.4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-}
-
-.red-box-container {
-    background-color: #DE0000;
-    color: #000000;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 31.5px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-/* .red-box-container::before {
-    content: "";
-    position: absolute;
-    top: 90px;
-    left: 560px;
-    width: 115px;
-    height: 115px;
-    background-image: url('public/images/Spark.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5;
-    z-index: -1;
-} */
-
-/* .spark-bg-overlay {
-    position: absolute;
-    top: 23%;
-    right: 0;
-    width: 11.5%;
-    opacity: 0.4;
-    z-index: -1;
-} */
-
-.red-box-title {
-    color: #000000;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 31.5px;
-    text-align: center;
-    padding: 29px 20px 0px 20px;
-    gap: 10px;
-    opacity: 0px;
-}
-
-.red-box-txt-container {
-    padding: 20px 40px 20px 40px;
-}
-
-@media (min-width: 640px) {
-    .red-box-txt-container .uk-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .red-box-txt-container .uk-grid>div {
-        flex-basis: calc(33.3333% - 10px);
-        box-sizing: border-box;
-    }
-
-    .red-box-txt-container .uk-grid>div:nth-child(4),
-    .red-box-txt-container .uk-grid>div:nth-child(5) {
-        flex-basis: calc(40% - 10px);
-    }
-
-    .red-box-txt-container .uk-grid>div:nth-child(4) {
-        margin-left: calc(10%);
-    }
-}
-
-@media (max-width: 639px) {
-    .red-box-txt-container .uk-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .red-box-txt-container .uk-grid>div {
-        flex-basis: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 545px) {
-    .red-box-txt-container .uk-grid {
-        display: flex;
-        flex-direction: column;
-        /* Stacks items vertically */
-        gap: 10px;
-    }
-
-    .red-box-txt-container .uk-grid>div {
-        flex-basis: 100%;
-        /* Full width for single-column layout */
-    }
-}
-
-.red-box-sec-container {
-    padding: 0px 120px;
-}
-
-.red-box-card-txt {
-    width: 100%;
-    border-radius: 20px;
-    border: none;
-    background-color: #AE0000;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 10px;
-}
-
-
-.red-box-sec-container {
-    padding: 0px 120px;
-}
-
-.red-box-card-txt {
-    width: 100%;
-    border-radius: 20px;
-    border: none;
-    background-color: #AE0000;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 10px;
-}
-
-.red-box-sec-container {
-    padding: 0px 120px;
-}
-
-.red-box-card-txt {
-    width: 100%;
-    border-radius: 20px;
-    border: none;
-    background-color: #AE0000;
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-    padding: 10px;
-}
-
-.haqdarshak-container {
-    padding-top: 30px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.haqdarshak-firstDesc {
-    font-family: 'OpenSans-Bold', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-}
-
-.haqdarshak-desc {
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-}
-
-.haqdarshak-button-link,
-.haqdarshak-button-link:hover {
-    text-decoration: none;
-}
-
-.haqdarshak-btn {
-    width: 610px;
-    height: 60px;
-    gap: 0px;
-    border-radius: 20px;
-    opacity: 1;
-    background-color: #CC0000;
-    color: #FFFFFF;
-    border: none;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    margin-bottom: 35px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'OpenSans-SemiBold', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.haqdarshak-btn:hover {
-    background-color: #b30000;
-    transform: scale(1.05);
-}
-
-.more-stories {
-    margin: 0 auto;
-
-}
-
-.more-stories-cont {
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-}
-
-.more-stories-link {
-    text-decoration: none;
-    color: #CC0000;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.more-stories-link:hover {
-    color: #ff0000;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
 .hash-tag {
     font-family: 'OpenSans-SemiBold', sans-serif;
     font-size: 16px;
@@ -770,6 +416,32 @@
 /**************************************/
 /******* Mobile Responsive CSS *******/
 /*************************************/
+
+@media screen and (max-width: 1920px) {
+    .uk-container {
+        width: 27%;
+    }
+
+    .cover-img {
+        width: 100%;
+        /* aspect-ratio: 65/45; */
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .lets-begin-button {
+        width: 100%;
+    }
+
+    .quiz-radio-button {
+        width: 100%;
+    }
+
+    .brandbadge-content-img {
+        width: 100%;
+        padding: 20px 0;
+    }
+}
 
 @media screen and (max-width: 959px) {
     .uk-container {

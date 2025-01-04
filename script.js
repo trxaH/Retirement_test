@@ -50,7 +50,7 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `At the check in counter, you're told that your flight is delayed. What do you do first?`,
+        question: `At the check in counter, you're told that your flight is delayed. <br> What do you do first?`,
         answers: {
           Income: `Pay extra to get onto the next available flight`,
           Wealth: `Create a ruckus`,
@@ -61,7 +61,7 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `You still have 30 minutes before your flight and you're feeling hungry. What do you do?`,
+        question: `You still have 30 minutes before your flight and you're feeling hungry. <br> What do you do?`,
         answers: {
           Wealth: `Eat at a restaurant at the transit area`,
           Capital: `Wait for the in-flight meal`,
@@ -72,7 +72,7 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `Seated at the window seat, you're enjoying the view when you notice the person next to you is sleeping. What do you do?`,
+        question: `Seated at the window seat, you're enjoying the view <br> when you notice the person next to you is sleeping. <br> What do you do?`,
         answers: {
           Wealth: `Continue enjoying the view with the shade up`,
           Legacy: `Pull down the window shade fully`,
@@ -83,7 +83,7 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ` `,
-        question: `At the baggage claim, you notice someone struggling to lift their luggage. Do you:`,
+        question: `At the baggage claim, you notice someone struggling to lift their luggage. <br> Do you:`,
         answers: {
           Legacy: `Offer to help them`,
           Income: `Take your luggage and walk away`,
@@ -154,10 +154,10 @@ class Quiz {
                             <img class="quiz-cover-image" src="pic/${quizData.image}" alt="Quiz Cover Image">
                         </div>
                         <div class="quiz-info">
-                            <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">${quizData.question}</p>
+                            <p class="quiz-desc" >${quizData.question}</p>
                             <div class="quiz-options">
                                 ${Object.entries(quizData.answers).map(([key, value]) => `
-                                <div class="quiz-option" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 600">
+                                <div class="quiz-option">
                                     <input id="quiz-${quizData.id}-${key}" type="radio" name="quiz-${quizData.id}" value="${key}">
                                     <label for="quiz-${quizData.id}-${key}">
                                         ${value}
@@ -239,14 +239,14 @@ class Quiz {
                 <img class="quiz-cover-image" src="pic/${tiebreakerQuiz.image}" alt="Tiebreaker Question">
               </div>
               <div class="quiz-info">
-                <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">
+                <p class="quiz-desc">
                   ${tiebreakerQuiz.question}
                 </p>
                 <div class="quiz-options">
                   ${Object.entries(filteredAnswers)
                     .map(
                       ([key, value]) => `
-                        <div class="quiz-option" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 600">
+                        <div class="quiz-option">
                           <input id="tiebreaker-${key}" type="radio" name="tiebreaker" value="${key}">
                           <label for="tiebreaker-${key}">
                             ${value}
@@ -257,7 +257,6 @@ class Quiz {
                 </div>
               </div>
             </div>`;
-  
             const tiebreakerOptions = document.querySelectorAll(".quiz-option input");
   
             if (tiebreakerOptions.length > 0) {
@@ -298,25 +297,6 @@ class Quiz {
       }
     }
   }  
-
-  processResult(dominantCategory) {
-    if (!dominantCategory) {
-      console.error("No dominant category provided to processResult.");
-      return;
-    }
-
-    const resultData = this.RESULT.find(
-      (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
-    );
-
-    if (resultData) {
-      console.log("Processing Result:", resultData);
-      location.href = resultData.url;
-    } else {
-      console.error("No matching result found for the category:", dominantCategory);
-    }
-  }
-
 }
 
 document.addEventListener("DOMContentLoaded", function () {
