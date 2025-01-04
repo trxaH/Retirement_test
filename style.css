@@ -41,6 +41,10 @@
     padding: 0px;
 }
 
+.uk-card-body {
+    position: relative;
+}
+
 .cover-img {
     width: 100%;
     /* aspect-ratio: 65/45; */
@@ -59,13 +63,17 @@
     font-family: 'OpenSans-Regular', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    line-height: 27px;
-    text-align: center;
     color: #000000;
     margin: 0 auto;
     display: block;
-    padding: 35px 0px;
-    /* position: absolute; */
+    padding: 40px 0px 40px 0px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the div appears above the image */
+    text-align: center;
+    width: 100%; /* Optional: adjust if you need to set a max width */
 }
 
 @media (max-width: 595px) {
