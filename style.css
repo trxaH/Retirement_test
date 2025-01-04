@@ -59,7 +59,7 @@
     /* margin-bottom: 100px; */
 }
 
-.lets-begin-desc {
+.lets-begin-desc,.quiz-info {
     font-family: 'OpenSans-Regular', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -85,8 +85,22 @@
 }
 
 .lets-begin-button-link,
-.lets-begin-button-link:hover {
+.lets-begin-button-link:hover,
+.quiz-desc {
     text-decoration: none;
+    font-family: 'OpenSans-Regular', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    top: 24%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the div appears above the image */
+    text-align: center;
+    width: 400px; /* Optional: adjust if you need to set a max width */
 }
 
 .lets-begin-button {
@@ -187,14 +201,14 @@
     max-width: 610px;
 }
 
-.quiz-desc {
+/* .quiz-desc {
     font-family: 'OpenSans-Regular', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     color: #000000;
-}
+} */
 
 .quiz-options {
     display: flex;
