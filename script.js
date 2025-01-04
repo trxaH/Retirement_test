@@ -140,7 +140,7 @@ class Quiz {
   renderQuiz(quizID) {
     if (quizID && !isNaN(quizID)) {
       const quizData = this.QUIZ.find((v) => v.id === quizID);
-      const isLastQuiz = quizID >= this.QUIZ.length;
+      const isLastQuiz = quizID >= this.QUIZ.length-1;
 
       if (quizData) {
         document.title = `Retirement Quiz | Lion Global Investors`;
@@ -229,7 +229,7 @@ class Quiz {
           quizRender.innerHTML = `
             <div class="uk-card quiz-card">
               <div class="ans-banner-container">
-                <img class="quiz-cover-image" src="pic/quiz-Q9.png" alt="Tiebreaker Question">
+                <img class="quiz-cover-image" src="pic/quiz-Q1.png" alt="Tiebreaker Question">
               </div>
               <div class="quiz-info">
                 <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">
@@ -288,7 +288,6 @@ class Quiz {
       }
     }
   }
-  
 }
 
 document.addEventListener("DOMContentLoaded", function () {
