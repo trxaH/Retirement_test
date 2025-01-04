@@ -197,11 +197,6 @@ class Quiz {
     }
   }
 
-
-
-
-
-
   showResult() {
     console.log("showResult => userAnswers -", this.userAnswers);
   
@@ -226,48 +221,63 @@ class Quiz {
         const quizRender = document.getElementById("quiz-render");
   
         if (quizRender) {
-          quizRender.innerHTML = `
-            <div class="uk-card quiz-card">
+          const tiebreakerQuiz = this.QUIZ.find(
+            (quiz) =>
+              quiz.question ===
+              "When you are at the Northern Lights, for your first picture, do you: "
+          );
+  
+          if (tiebreakerQuiz) {
+            const filteredAnswers = Object.fromEntries(
+              Object.entries(tiebreakerQuiz.answers).filter(([key]) =>
+                dominantCategories.includes(key)
+              )
+            );
+            quizRender.innerHTML = `
+              <div class="uk-card quiz-card">
               <div class="ans-banner-container">
-                <img class="quiz-cover-image" src="pic/quiz-Q1.png" alt="Tiebreaker Question">
+                <img class="quiz-cover-image" src="pic/${tiebreakerQuiz.image}" alt="Tiebreaker Question">
               </div>
               <div class="quiz-info">
                 <p class="quiz-desc" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: false; delay: 500">
-                  Choose your preference to break the tie:
+                  ${tiebreakerQuiz.question}
                 </p>
                 <div class="quiz-options">
-                  ${dominantCategories
+                  ${Object.entries(filteredAnswers)
                     .map(
-                      (category) => `
-                      <div class="quiz-option" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 600">
-                        <input id="tiebreaker-${category}" type="radio" name="tiebreaker" value="${category}">
-                        <label for="tiebreaker-${category}">
-                          ${category}
-                        </label>
-                      </div>`
+                      ([key, value]) => `
+                        <div class="quiz-option" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 600">
+                          <input id="tiebreaker-${key}" type="radio" name="tiebreaker" value="${key}">
+                          <label for="tiebreaker-${key}">
+                            ${value}
+                          </label>
+                        </div>`
                     )
                     .join("")}
                 </div>
               </div>
             </div>`;
   
-          const tiebreakerOptions = document.querySelectorAll(".quiz-option input");
+            const tiebreakerOptions = document.querySelectorAll(".quiz-option input");
   
-          if (tiebreakerOptions.length > 0) {
-            tiebreakerOptions.forEach((option) => {
-              option.addEventListener("change", () => {
-                tiebreakerOptions.forEach((el) => el.setAttribute("disabled", true));
+            if (tiebreakerOptions.length > 0) {
+              tiebreakerOptions.forEach((option) => {
+                option.addEventListener("change", () => {
+                  tiebreakerOptions.forEach((el) => el.setAttribute("disabled", true));
   
-                const selectedInput = document.querySelector(".quiz-option input:checked");
+                  const selectedInput = document.querySelector(".quiz-option input:checked");
   
-                if (selectedInput) {
-                  dominantCategory = selectedInput.value;
-                  console.log("Tiebreaker Winner:", dominantCategory);
+                  if (selectedInput) {
+                    dominantCategory = selectedInput.value;
+                    console.log("Tiebreaker Winner:", dominantCategory);
   
-                  this.processResult(dominantCategory);
-                }
+                    this.processResult(dominantCategory);
+                  }
+                });
               });
-            });
+            }
+          } else {
+            console.error("Tiebreaker question not found in QUIZ data.");
           }
         }
       } else {
@@ -287,7 +297,7 @@ class Quiz {
         }
       }
     }
-  }
+  }  
 }
 
 document.addEventListener("DOMContentLoaded", function () {
