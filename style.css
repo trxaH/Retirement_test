@@ -436,10 +436,6 @@
         width: 100%;
     }
 
-    .quiz-options {
-        padding-left: 150px;
-    }
-
     .brandbadge-content-img {
         width: 100%;
         padding: 20px 0;
@@ -464,6 +460,10 @@
 
     .quiz-radio-button {
         width: 100%;
+    }
+    
+    .quiz-options {
+        padding-left: 150px;
     }
 
     .brandbadge-content-img {
