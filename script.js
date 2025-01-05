@@ -288,6 +288,25 @@ class Quiz {
       }
     }
   }  
+  
+  processResult(dominantCategory) {
+    if (!dominantCategory) {
+      console.error("No dominant category provided to processResult.");
+      return;
+    }
+
+    const resultData = this.RESULT.find(
+      (r) => r.format.toLowerCase().includes(dominantCategory.toLowerCase())
+    );
+
+    if (resultData) {
+      console.log("Processing Result:", resultData);
+      location.href = resultData.url;
+    } else {
+      console.error("No matching result found for the category:", dominantCategory);
+    }
+  }
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
