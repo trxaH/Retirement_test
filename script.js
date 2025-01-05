@@ -145,7 +145,7 @@ class Quiz {
                             <img class="quiz-cover-image" src="pic/${quizData.image}" alt="Quiz Cover Image">
                         </div>
                         <div class="quiz-info">
-                            <p class="quiz-desc" >${quizData.question}</p>
+                            
                             <div class="quiz-options">
                                 ${Object.entries(quizData.answers).map(([key, value]) => `
                                 <div class="quiz-option">
@@ -231,7 +231,7 @@ class Quiz {
               </div>
               <div class="quiz-info">
                 <p class="quiz-desc">
-                  ${tiebreakerQuiz.question}
+                  
                 </p>
                 <div class="quiz-options">
                   ${Object.entries(filteredAnswers)
