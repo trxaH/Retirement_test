@@ -166,18 +166,6 @@
     object-position: center center;
 }
 
-.quiz-transition {
-    font-family: 'OpenSans-Regular', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-    margin: 0 auto;
-    display: block;
-    max-width: 610px;
-}
-
 .quiz-desc {
     text-decoration: none;
     font-family: 'OpenSans-Regular', sans-serif;
