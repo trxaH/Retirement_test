@@ -164,7 +164,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 150px;
+    margin-top: 230px;
     /* padding-left: 580px; */
     width: 200px;
 }
@@ -344,21 +344,6 @@
     opacity: 0.7;
 }
 
-.brandbadge-img-center-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.brandbadge-content-img {
-    max-width: 100%;
-    height: auto;
-    gap: 0px;
-    opacity: 0px;
-    padding: 40px 0;
-}
-
 
 /************************************/
 /** End of WYS Quiz Ans Page CSS ***/
@@ -390,12 +375,9 @@
     }
 
     .quiz-options {
-        padding-left: 580px;
-    }
-
-    .brandbadge-content-img {
-        width: 100%;
-        padding: 20px 0;
+        /* padding-left: 580px; */
+        transform: translate(-50%,-50%);
+        left: 66%;
     }
 }
 
@@ -406,7 +388,6 @@
 
     .cover-img {
         width: 100%;
-        /* aspect-ratio: 65/45; */
         object-fit: cover;
         object-position: center center;
     }
@@ -420,12 +401,10 @@
     }
 
     .quiz-options {
-        padding-left: 130px;
-    }
-
-    .brandbadge-content-img {
-        width: 100%;
-        padding: 20px 0;
+        /* padding-left: 130px; */
+        transform: translate(-50%,-50%);
+        left: 85%;
+        margin-top: 220px;
     }
 }
 
