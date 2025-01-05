@@ -6,7 +6,8 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `As you prepare to embark on a long journey, you pack your bag. <br> How do you pack?`,
+        // question: `As you prepare to embark on a long journey, you pack your bag. <br> How do you pack?`,
+        question: ``,
         answers: {
           Wealth: `Bring the bare minimum`,
           Capital: `Pack everything you might need`,
@@ -17,7 +18,8 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `Who is accompanying you to see the Northern Lights?`,
+        // question: `Who is accompanying you to see the Northern Lights?`,
+        question: ``,
         answers: {
           Capital: `2 - 3 friends to split cost`,
           Legacy: `Bring the whole kampong`,
@@ -28,7 +30,8 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `It's time to head to the airport. <br> How early do you leave?`,
+        // question: `It's time to head to the airport. <br> How early do you leave?`,
+        question: ``,
         answers: {
           Legacy: `Leave 3 hours early to go shopping/eating`,
           Capital: `Leave 3 hours early because kiasu`,
@@ -38,8 +41,9 @@ class Quiz {
       },
       {
         image: `quiz-Q1.png`,
-        transition: ``,
-        question: `While queuing to check in your luggage, someone tries to cut in front of you. <br> Do you:`,
+        // transition: ``,
+        // question: `While queuing to check in your luggage, someone tries to cut in front of you. <br> Do you:`,
+        question: ``,
         answers: {
           Capital: `Let them cut in front of you hoping that someone else will speak up`,
           Legacy: `Ask them nicely to join the queue behind you`,
@@ -50,7 +54,8 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `At the check in counter, you're told that your flight is delayed. <br> What do you do first?`,
+        // question: `At the check in counter, you're told that your flight is delayed. <br> What do you do first?`,
+        question: ``,
         answers: {
           Income: `Pay extra to get onto the next available flight`,
           Wealth: `Create a ruckus`,
@@ -61,7 +66,8 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `You still have 30 minutes before your flight and you're feeling hungry. <br> What do you do?`,
+        // question: `You still have 30 minutes before your flight and you're feeling hungry. <br> What do you do?`,
+        question: ``,
         answers: {
           Wealth: `Eat at a restaurant at the transit area`,
           Capital: `Wait for the in-flight meal`,
@@ -72,7 +78,8 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `Seated at the window seat, you're enjoying the view <br> when you notice the person next to you is sleeping. <br> What do you do?`,
+        // question: `Seated at the window seat, you're enjoying the view <br> when you notice the person next to you is sleeping. <br> What do you do?`,
+        question: ``,
         answers: {
           Wealth: `Continue enjoying the view with the shade up`,
           Legacy: `Pull down the window shade fully`,
@@ -83,7 +90,8 @@ class Quiz {
       {
         image: `quiz-Q1.png`,
         transition: ` `,
-        question: `At the baggage claim, you notice someone struggling to lift their luggage. <br> Do you:`,
+        // question: `At the baggage claim, you notice someone struggling to lift their luggage. <br> Do you:`,
+        question: ``,
         answers: {
           Legacy: `Offer to help them`,
           Income: `Take your luggage and walk away`,
@@ -94,7 +102,8 @@ class Quiz {
       { //only show when got tie-breaker
         image: `quiz-Q1.png`,
         transition: ``,
-        question: `When you are at the Northern Lights, for your first picture, do you: `,
+        // question: `When you are at the Northern Lights, for your first picture, do you: `,
+        question: ``,
         answers: {
           Capital: `Take a selfie`,
           Wealth: `Ask someone to take pictures of you`,
