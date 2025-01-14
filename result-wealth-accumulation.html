@@ -28,20 +28,20 @@
           <img class="main-img ans-banner-img" src="pic/wealth.png" alt="Wealth Accumulation">
         </div>
 
-        <!-- <div class="share-results">
+        <div class="share-results">
           <p>Share your quiz results!</p>
           <div class="social-media-icons">
-            <a href="#" class="share-links instagram" target="_blank">
-              <img src="public/images/IG.png" alt="Instagram" />
+            <a href="#" id="shareInstagram" class="share-links instagram" target="_blank">
+              <img src="pic/instagram.png" alt="Instagram" />
             </a>
-            <a href="#" class="share-links facebook" target="_blank">
+            <!-- <a href="#" class="share-links facebook" target="_blank">
               <img src="public/images/fb.png" alt="Facebook" />
             </a>
             <a href="#" class="share-links linkedin" target="_blank">
               <img src="public/images/link.png" alt="LinkedIn" />
-            </a>
+            </a> -->
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -49,3 +49,27 @@
 </body>
 
 </html>
+
+<script>
+  document.getElementById("shareInstagram").addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const imageURL = "/pic/capital.png"; // Update with your image URL
+    const text = "Check out my game result!";
+
+    if (navigator.share) {
+        // Native share API for mobile
+        navigator.share({
+            title: "Game Result",
+            text: text,
+            url: imageURL, // URL or content you want to share
+        })
+        .then(() => console.log("Shared successfully"))
+        .catch((error) => console.error("Error sharing:", error));
+    } else {
+        // Fallback for desktop browsers: Instagram deep link
+        const instagramDeepLink = `instagram://story-camera`;
+        window.open(instagramDeepLink, "_blank");
+    }
+});
+</script>
