@@ -14,8 +14,8 @@ class Quiz {
         },
       },
       {
-        image: `quiz-Q1.png`,
-        question: `Who is accompanying you to see the Northern Lights?`,
+        image: `quiz-Q2.png`,
+        question: `Who is coming with you on your trip?`,
         answers: {
           Capital: `2 - 3 friends to split cost`,
           Legacy: `Bring the whole kampong`,
@@ -24,8 +24,8 @@ class Quiz {
         },
       },
       {
-        image: `quiz-Q1.png`,
-        question: `It's time to head to the airport. <br> How early do you leave?`,
+        image: `quiz-Q3.png`,
+        question: `It's time to head to the airport. <br> When do you leave?`,
         answers: {
           Legacy: `Leave 3 hours early to go shopping/eating`,
           Capital: `Leave 3 hours early because kiasu`,
@@ -34,27 +34,27 @@ class Quiz {
         },
       },
       {
-        image: `quiz-Q1.png`,
+        image: `quiz-Q4.png`,
         question: `While queuing to check in your luggage, someone tries to cut in front of you. <br> Do you:`,
         answers: {
           Capital: `Let them cut in front of you hoping that someone else will speak up`,
-          Legacy: `Ask them nicely to join the queue behind you`,
-          Wealth: `Speak loudly to get them to join the queue`,
+          Legacy: `Ask them to join the queue behind you`,
+          Wealth: `Attempt to block their way`,
           Income: `Let them cut in front of you to avoid creating a scene`,
         },
       },
       {
-        image: `quiz-Q1.png`,
-        question: `At the check in counter, you're told that your flight is delayed. <br> What do you do first?`,
+        image: `quiz-Q5.png`,
+        question: `You're told that your flight is delayed. <br> What do you do first?`,
         answers: {
           Income: `Pay extra to get onto the next available flight`,
-          Wealth: `Create a ruckus`,
+          Wealth: `Demand for the next available flight`,
           Capital: `Wait for the delayed flight`,
           Legacy: `Claim full compensation from insurance happily`,
         },
       },
       {
-        image: `quiz-Q1.png`,
+        image: `quiz-Q6.png`,
         question: `You still have 30 minutes before your flight and you're feeling hungry. <br> What do you do?`,
         answers: {
           Wealth: `Eat at a restaurant at the transit area`,
@@ -64,8 +64,8 @@ class Quiz {
         },
       },
       {
-        image: `quiz-Q1.png`,
-        question: `Seated at the window seat, you're enjoying the view <br> when you notice the person next to you is sleeping. <br> What do you do?`,
+        image: `quiz-Q7.png`,
+        question: `Seated at the window seat, you're enjoying the view when you notice the person next to you is sleeping. <br> What do you do?`,
         answers: {
           Wealth: `Continue enjoying the view with the shade up`,
           Legacy: `Pull down the window shade fully`,
@@ -74,7 +74,7 @@ class Quiz {
         },
       },
       {
-        image: `quiz-Q1.png`,
+        image: `quiz-Q8.png`,
         question: `At the baggage claim, you notice someone struggling to lift their luggage. <br> Do you:`,
         answers: {
           Legacy: `Offer to help them`,
@@ -84,7 +84,7 @@ class Quiz {
         },
       },
       { //only show when got tie-breaker
-        image: `quiz-Q1.png`,
+        image: `quiz-Q9.png`,
         question: `When you are at the Northern Lights, for your first picture, do you: `,
         answers: {
           Capital: `Take a selfie`,
@@ -231,7 +231,7 @@ class Quiz {
               </div>
               <div class="quiz-info">
                 <p class="quiz-desc">
-                  
+                
                 </p>
                 <div class="quiz-options">
                   ${Object.entries(filteredAnswers)

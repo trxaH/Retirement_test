@@ -1,7 +1,3 @@
-js line 174 = <img class="quiz-cover-image" src="${this.imagePatch}${quizData.image}" alt="Quiz Cover Image">
-
-<img src="pic/logo.png" class="ans-overlay" alt="LGI Overlay Logo">
-
-text over image
-
-endings not working
+if want to see question, add in script js:
+    line 148: <p class="quiz-desc" >${quizData.question}</p>
+    line 234: ${tiebreakerQuiz.question}
