@@ -59,13 +59,15 @@
 
     if (navigator.share) {
         // Native share API for mobile
-        navigator.share({
-            title: "Game Result",
-            text: text,
-            url: imageURL, // URL or content you want to share
-        })
-        .then(() => console.log("Shared successfully"))
-        .catch((error) => console.error("Error sharing:", error));
+        // navigator.share({
+        //     title: "Game Result",
+        //     text: text,
+        //     url: imageURL, // URL or content you want to share
+        // })
+        // .then(() => console.log("Shared successfully"))
+        // .catch((error) => console.error("Error sharing:", error));
+        const instagramDeepLink = `instagram://story-camera`;
+        window.location.href = instagramDeepLink;
     } else {
         // Fallback for desktop browsers: Instagram deep link
         const instagramDeepLink = `instagram://story-camera`;
