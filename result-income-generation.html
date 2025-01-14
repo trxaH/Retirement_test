@@ -52,25 +52,29 @@
 </html>
 
 <script>
-  document.getElementById("shareInstagram").addEventListener("click", (event) => {
-    event.preventDefault();
-
-    const imageURL = "/pic/capital.png"; // Update with your image URL
-    const text = "Check out my game result!";
-
-    if (navigator.share) {
-        // Native share API for mobile
-        navigator.share({
-            title: "Game Result",
-            text: text,
-            url: imageURL, // URL or content you want to share
-        })
-        .then(() => console.log("Shared successfully"))
-        .catch((error) => console.error("Error sharing:", error));
-    } else {
-        // Fallback for desktop browsers: Instagram deep link
-        const instagramDeepLink = `instagram://story-camera`;
-        window.open(instagramDeepLink, "_blank");
-    }
-});
-</script>
+  document.getElementById("shareInstagram").addEventListener("click", async (event) => {
+      event.preventDefault();
+  
+      const imageURL = "/pic/capital.png"; // Update with your image path
+  
+      if (navigator.share) {
+          // Fetch the image file
+          const response = await fetch(imageURL);
+          const blob = await response.blob();
+          const file = new File([blob], "income.png", { type: blob.type });
+  
+          // Use the native share API with the image file
+          navigator.share({
+              title: "Game Result",
+              text: "Check out my game result!",
+              files: [file], // Share the image file
+          })
+          .then(() => console.log("Shared successfully"))
+          .catch((error) => console.error("Error sharing:", error));
+      } else {
+          // Fallback for desktop or unsupported browsers
+          const instagramDeepLink = `instagram://story-camera`;
+          window.open(instagramDeepLink, "_blank");
+      }
+  });
+  </script>
