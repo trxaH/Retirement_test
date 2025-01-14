@@ -54,28 +54,26 @@
 
 <script>
   document.getElementById("shareInstagram").addEventListener("click", async (event) => {
-      event.preventDefault();
-  
-      const imageURL = "/pic/capital.png"; // Update with your image path
-  
-      if (navigator.share) {
-          // Fetch the image file
-          const response = await fetch(imageURL);
-          const blob = await response.blob();
-          const file = new File([blob], "legacy.png", { type: blob.type });
-  
-          // Use the native share API with the image file
-          navigator.share({
-              title: "Game Result",
-              text: "Check out my game result!",
-              files: [file], // Share the image file
-          })
-          .then(() => console.log("Shared successfully"))
-          .catch((error) => console.error("Error sharing:", error));
+    e.preventDefault();
+    const mainImage = document.querySelector('.ans-banner-img');
+    if (mainImage && mainImage.getAttribute('src')) {
+      const URL = document.getElementById('full-page') ? document.getElementById('full-page').getAttribute('src') : mainImage.getAttribute('src');
+      const response = await fetch(URL.toString());
+      const blob = await response.blob();
+      const filesArray = [
+        new File([blob], `legacy.png`, {
+          type: 'image/png',
+          lastModified: new Date().getTime(),
+        }),
+      ];
+      const shareData = {
+        files: filesArray,
+      };
+      if (navigator.canShare && navigator.canShare(shareData)) {
+        await navigator.share(shareData);
       } else {
-          // Fallback for desktop or unsupported browsers
-          const instagramDeepLink = `instagram://story-camera`;
-          window.open(instagramDeepLink, "_blank");
+        alert(`navigator.share doesn't support in your device`);
       }
+    }
   });
-  </script>
+</script>
